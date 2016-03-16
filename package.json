@@ -1,0 +1,41 @@
+{
+  "name": "leo-blog-starter",
+  "version": "1.0.0",
+  "description": "We be bloggin",
+  "private": true,
+  "main": "n/a",
+  "scripts": {
+    "api": "leo graphql",
+    "serve-dist": "http-server dist",
+    "start": "leo develop",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "update-schema": "leo schema -u"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/superawesomelabs/leo-blog-starter.git"
+  },
+  "keywords": [
+    "leo",
+    "static"
+  ],
+  "author": "Chris Biscardi <chris@christopherbiscardi.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/superawesomelabs/leo-blog-starter/issues"
+  },
+  "homepage": "https://github.com/superawesomelabs/leo-blog-starter#readme",
+  "dependencies": {
+    "@sa-labs/leo-core": "0.2.2",
+    "@sa-labs/leo-plugin-blogpost": "^0.2.0",
+    "@sa-labs/leo-plugin-postcss": "^0.2.0",
+    "@sa-labs/leo-plugin-images": "0.2.0",
+    "@sa-labs/leo-plugin-markdown": "^0.2.0",
+    "frontmatter-loader": "0.0.1",
+    "lost": "^6.6.3"
+  },
+  "devDependencies": {
+    "http-server": "^0.8.5",
+    "normalize.css": "^3.0.3"
+  }
+}
