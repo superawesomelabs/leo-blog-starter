@@ -26,16 +26,16 @@
   },
   "homepage": "https://github.com/superawesomelabs/leo-blog-starter#readme",
   "dependencies": {
-    "@sa-labs/leo-core": "0.2.2",
-    "@sa-labs/leo-plugin-blogpost": "^0.2.0",
-    "@sa-labs/leo-plugin-postcss": "^0.2.0",
-    "@sa-labs/leo-plugin-images": "0.2.0",
-    "@sa-labs/leo-plugin-markdown": "^0.2.0",
+    "@sa-labs/leo-core": "0.6.0",
+    "@sa-labs/leo-plugin-blogpost": "^0.6.0",
+    "@sa-labs/leo-plugin-postcss": "^0.6.0",
+    "@sa-labs/leo-plugin-images": "0.4.1",
+    "@sa-labs/leo-plugin-markdown": "^0.6.0",
     "frontmatter-loader": "0.0.1",
-    "lost": "^6.6.3"
+    "lost": "^7.1.1"
   },
   "devDependencies": {
-    "http-server": "^0.8.5",
-    "normalize.css": "^3.0.3"
+    "http-server": "^0.9.0",
+    "normalize.css": "^5.0.0"
   }
 }
