@@ -1,50 +1,31 @@
 /**
  * Normalize styles are first, so they end up first in the stylesheet
  */
-import 'normalize.css';
-import React, { Component } from 'react';
-import { Route, IndexRoute } from 'react-router';
-import Relay from 'react-relay';
-import Nav from './components/Nav';
-import Home from './components/Home';
-import Post from './components/Post';
-import Posts from './pages/Posts';
-import styles from './routes.css';
+import "normalize.css";
+import React, { Component } from "react";
+import { Route, Switch } from "react-router-dom";
+import Nav from "./src/Nav";
+import Home from "./src/Home";
+import Post from "./src/Post";
+import Posts from "./src/Posts";
+import styles from "./routes.css";
 
-class App extends Component {
-  render() {
-    const { children, ...props } = this.props;
-    return (
-      <div>
-        <Nav/>
-        <div>{children}</div>
-      </div>
-    )
-  }
-}
+const App = ({ children, ...props }) => (
+  <div>
+    <Nav />
+    <div>{children}</div>
+  </div>
+);
 
-class NoMatch extends Component {
-  render() {
-    return (
-      <div>404</div>
-    )
-  }
-}
-
-const RootQuery = {
-  root: () => Relay.QL`query RootQuery { root }`
-}
+const NoMatch = () => <div>404</div>;
 
 export default (
-  <Route path='/' component={App}>
-    <Route path='/posts'
-           queries={RootQuery}
-           component={Posts} />
-    <Route path='/posts/:slug'
-           component={Post}
-           queries={RootQuery} />
-    <IndexRoute component={Home} 
-           queries={RootQuery}/>
-    <Route path='*' component={NoMatch} />
-  </Route>
-)
+  <App>
+    <Switch>
+      <Route path="/posts" exact component={Posts} />
+      <Route path="/:slug" exact component={Post} />
+      <Route path="/" exact component={Home} />
+      <Route component={NoMatch} />
+    </Switch>
+  </App>
+);
